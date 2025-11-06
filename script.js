@@ -682,13 +682,11 @@ function initAnalytics() {
 
 // ===== GOOGLE ANALYTICS INTEGRATION =====
 function initGoogleAnalytics() {
-    // Google Analytics snippet (replace YOUR_TRACKING_ID with actual ID)
-    // This is a placeholder - in production, you would use your actual GA ID
-    
+    // Google Analytics snippet with your actual Measurement ID
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
+    gtag('config', 'G-VGCSXQKE3G');
 
     // Track page view
     gtag('event', 'page_view');
@@ -725,7 +723,7 @@ function initGoogleAnalytics() {
         });
     });
 
-    console.log('✅ Google Analytics initialized (Replace GA_MEASUREMENT_ID with your actual ID)');
+    console.log('✅ Google Analytics initialized with ID: G-VGCSXQKE3G');
 }
 
 // ===== CONSOLE MESSAGE =====
