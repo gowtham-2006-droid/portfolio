@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAudioControl();
     initAnalytics();
     initGoogleAnalytics();
+    initSkillProgress();
 });
 
 // ===== MOBILE MENU =====
@@ -724,6 +725,61 @@ function initGoogleAnalytics() {
     });
 
     console.log('✅ Google Analytics initialized with ID: G-VGCSXQKE3G');
+}
+
+// ===== SKILL PROGRESS ANIMATION =====
+function initSkillProgress() {
+    const skillCards = document.querySelectorAll('.skill-progress-card');
+
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressFill = entry.target.querySelector('.progress-fill');
+                if (progressFill && !progressFill.dataset.animated) {
+                    const target = parseInt(progressFill.getAttribute('data-target'));
+                    animateSkillProgress(progressFill, target);
+                    progressFill.dataset.animated = 'true';
+                    observer.unobserve(entry.target);
+                }
+            }
+        });
+    }, observerOptions);
+
+    skillCards.forEach(card => {
+        observer.observe(card);
+    });
+
+    console.log('✅ Skill progress animation initialized');
+}
+
+function animateSkillProgress(element, target) {
+    const duration = 2000; // 2 seconds
+    const start = 0;
+    const startTime = performance.now();
+
+    function updateProgress(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function
+        const easeOutQuad = 1 - Math.pow(1 - progress, 2);
+        const currentWidth = start + (target - start) * easeOutQuad;
+
+        element.style.width = currentWidth + '%';
+
+        if (progress < 1) {
+            requestAnimationFrame(updateProgress);
+        } else {
+            element.style.width = target + '%';
+        }
+    }
+
+    requestAnimationFrame(updateProgress);
 }
 
 // ===== CONSOLE MESSAGE =====
