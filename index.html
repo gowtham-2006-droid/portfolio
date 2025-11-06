@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowtham Nagaraju - Developer & AI Enthusiast</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle">
+                <div class="loader-circle-inner"></div>
+                <div class="loader-dot"></div>
+            </div>
+            <p class="loader-text">Initializing</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Gowtham</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#resume" class="resume-btn">
+                    <i class="fas fa-download"></i> Resume
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Theme Color Customizer -->
+    <div class="theme-customizer">
+        <button class="customizer-toggle" id="customizerToggle" title="Customize Theme">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="customizer-panel" id="customizerPanel">
+            <h3>Theme Colors</h3>
+            <div class="color-options">
+                <button class="color-option active" data-theme="cyan" title="Cyan (Default)">
+                    <span class="color-swatch" style="background: #00d9ff;"></span>
+                </button>
+                <button class="color-option" data-theme="purple" title="Purple">
+                    <span class="color-swatch" style="background: #a855f7;"></span>
+                </button>
+                <button class="color-option" data-theme="pink" title="Pink">
+                    <span class="color-swatch" style="background: #ec4899;"></span>
+                </button>
+                <button class="color-option" data-theme="green" title="Green">
+                    <span class="color-swatch" style="background: #10b981;"></span>
+                </button>
+                <button class="color-option" data-theme="orange" title="Orange">
+                    <span class="color-swatch" style="background: #f97316;"></span>
+                </button>
+            </div>
+            <div class="audio-control">
+                <h4>Background Music</h4>
+                <button class="audio-toggle" id="audioToggle">
+                    <i class="fas fa-music"></i> Enable Music
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <h1 class="hero-title">
+                        <span class="title-line">Creative Developer</span>
+                        <span class="title-line">& AI Enthusiast</span>
+                    </h1>
+                    <p class="hero-description">Building intelligent solutions through elegant code and innovative design</p>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">View My Work</span>
+                        <span class="btn-icon">↓</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="btn-text">Get in Touch</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Gowtham Nagaraju" class="profile-image">
+                    <div class="image-glow"></div>
+                </div>
+                <div class="floating-box box-1"></div>
+                <div class="floating-box box-2"></div>
+                <div class="floating-box box-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p>I'm Gowtham Nagaraju, a B.Tech 2nd year student specializing in Computer Science with AI/ML. I'm passionate about creating exceptional digital experiences and solving real-world problems through technology. Based in India, I'm committed to excellence in every project I undertake.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>What I Do</h3>
+                    <p>I build full-stack applications, develop machine learning models, and design responsive interfaces. My expertise spans frontend development with HTML, CSS, and JavaScript, backend systems with Python, and data-driven solutions. I combine technical excellence with creative problem-solving to deliver impactful, scalable solutions.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>My Passion</h3>
+                    <p>I'm driven by innovation and continuous learning. I love exploring emerging technologies like AI, machine learning, and modern web frameworks. Every challenge is an opportunity to grow, and I'm constantly pushing the boundaries of what's possible with code.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Technical Expertise</h3>
+                    <p>Proficient in multiple programming languages and frameworks. I excel at writing clean, maintainable code and following industry best practices. Whether it's frontend development, backend systems, or data science projects, I bring a systematic approach to problem-solving.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML Focus</h3>
+                    <p>As a CSM specialization student, I focus on artificial intelligence and machine learning. I work with data science tools, build predictive models, and explore the intersection of AI and real-world applications. My goal is to leverage AI to create intelligent, adaptive solutions.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Collaboration & Growth</h3>
+                    <p>I believe in the power of teamwork and open communication. I'm always eager to collaborate with peers, mentors, and industry professionals. I'm committed to lifelong learning and staying updated with the latest trends in technology and development practices.</p>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3 class="skills-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-badge">HTML</div>
+                    <div class="skill-badge">CSS</div>
+                    <div class="skill-badge">JavaScript</div>
+                    <div class="skill-badge">Python</div>
+                    <div class="skill-badge">Git</div>
+                    <div class="skill-badge">SQL</div>
+                    <div class="skill-badge">C Language</div>
+                    <div class="skill-badge">Data Science</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Journey</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech CSM (AI/ML)</h3>
+                        <p class="timeline-date">2nd Year | 2023 - Present</p>
+                        <p class="timeline-description">Currently pursuing Bachelor of Technology in Computer Science with specialization in AI/ML. Focused on building strong foundations in data science, machine learning, and full-stack development.</p>
+                        <div class="timeline-tags">
+                            <span>Data Science</span>
+                            <span>Machine Learning</span>
+                            <span>AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack Development Journey</h3>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p class="timeline-description">Independently learning and building projects in web development. Mastered HTML, CSS, JavaScript and currently exploring modern frameworks and backend technologies.</p>
+                        <div class="timeline-tags">
+                            <span>Frontend</span>
+                            <span>Backend</span>
+                            <span>Web Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Competitive Programming</h3>
+                        <p class="timeline-date">2022 - Present</p>
+                        <p class="timeline-description">Active participant in coding competitions and problem-solving platforms. Building algorithmic thinking and data structure expertise through consistent practice.</p>
+                        <div class="timeline-tags">
+                            <span>DSA</span>
+                            <span>Problem Solving</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Open Source Contributions</h3>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p class="timeline-description">Contributing to open-source projects on GitHub. Collaborating with developers worldwide, learning best practices, and giving back to the community.</p>
+                        <div class="timeline-tags">
+                            <span>Open Source</span>
+                            <span>Collaboration</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="frontend" style="position: relative;">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="E-Commerce">
+                        <div class="project-overlay"></div>
+                        <div class="project-tag">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack web application featuring product catalog, shopping cart, and secure payment integration.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Explore Project →</a>
+                            <a href="#" class="project-demo" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="aiml" style="position: relative;">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=300&fit=crop" alt="ML Model">
+                        <div class="project-overlay"></div>
+                        <div class="project-tag">AI/ML</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ML Prediction Model</h3>
+                        <p>Advanced machine learning model for predictive analytics using regression and classification algorithms.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Explore Project →</a>
+                            <a href="#" class="project-demo" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="backend" style="position: relative;">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400&h=300&fit=crop" alt="Database">
+                        <div class="project-overlay"></div>
+                        <div class="project-tag">Backend</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Management System</h3>
+                        <p>Enterprise-grade database application for managing student records, grades, and administrative operations.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Database</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Explore Project →</a>
+                            <a href="#" class="project-demo" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" alt="Portfolio">
+                        <div class="project-overlay"></div>
+                        <div class="project-tag">Design</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Modern Portfolio Website</h3>
+                        <p>Responsive personal portfolio with stunning animations, dark theme, and professional aesthetics.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Explore Project →</a>
+                            <a href="#" class="project-demo" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics & Achievements Section -->
+    <section id="analytics" class="analytics-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="analytics-grid">
+                <!-- GitHub Stats -->
+                <div class="analytics-card github-card">
+                    <div class="card-header">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub Stats</h3>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <span class="stat-label">Repositories</span>
+                            <span class="stat-value" data-github="repos">15</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Followers</span>
+                            <span class="stat-value" data-github="followers">45</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Contributions</span>
+                            <span class="stat-value" data-github="contributions">250+</span>
+                        </div>
+                    </div>
+                    <div class="languages-chart">
+                        <h4>Top Languages</h4>
+                        <div class="language-bar">
+                            <div class="language-item">
+                                <span class="lang-name">Python</span>
+                                <div class="lang-progress">
+                                    <div class="lang-fill" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <span class="lang-name">JavaScript</span>
+                                <div class="lang-progress">
+                                    <div class="lang-fill" style="width: 35%;"></div>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <span class="lang-name">SQL</span>
+                                <div class="lang-progress">
+                                    <div class="lang-fill" style="width: 20%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/gowtham-2006-droid" target="_blank" class="view-profile-btn">
+                        View Profile <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- LeetCode Stats -->
+                <div class="analytics-card leetcode-card">
+                    <div class="card-header">
+                        <i class="fas fa-code"></i>
+                        <h3>LeetCode Stats</h3>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <span class="stat-label">Problems Solved</span>
+                            <span class="stat-value" data-leetcode="solved">85</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Success Rate</span>
+                            <span class="stat-value" data-leetcode="rate">76%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Ranking</span>
+                            <span class="stat-value" data-leetcode="rank">Top 15%</span>
+                        </div>
+                    </div>
+                    <div class="difficulty-stats">
+                        <h4>Difficulty Breakdown</h4>
+                        <div class="difficulty-items">
+                            <div class="diff-item">
+                                <span class="easy">Easy</span>
+                                <span class="count">35</span>
+                            </div>
+                            <div class="diff-item">
+                                <span class="medium">Medium</span>
+                                <span class="count">40</span>
+                            </div>
+                            <div class="diff-item">
+                                <span class="hard">Hard</span>
+                                <span class="count">10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://leetcode.com" target="_blank" class="view-profile-btn">
+                        View Profile <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- HackerRank Stats -->
+                <div class="analytics-card hackerrank-card">
+                    <div class="card-header">
+                        <i class="fas fa-star"></i>
+                        <h3>HackerRank Stats</h3>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stat-item">
+                            <span class="stat-label">Problems Solved</span>
+                            <span class="stat-value" data-hackerrank="solved">120</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Badges Earned</span>
+                            <span class="stat-value" data-hackerrank="badges">18</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Star Count</span>
+                            <span class="stat-value" data-hackerrank="stars">★★★★☆</span>
+                        </div>
+                    </div>
+                    <div class="skills-display">
+                        <h4>Skills Verified</h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">Data Structures</span>
+                            <span class="skill-badge">Algorithms</span>
+                        </div>
+                    </div>
+                    <a href="https://www.hackerrank.com" target="_blank" class="view-profile-btn">
+                        View Profile <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visitor Analytics Summary -->
+            <div class="analytics-summary">
+                <h3>📈 Portfolio Analytics</h3>
+                <div class="summary-stats">
+                    <div class="summary-card">
+                        <span class="metric-label">Total Visitors</span>
+                        <span class="metric-value" id="totalVisitors">0</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="metric-label">This Session</span>
+                        <span class="metric-value" id="sessionTime">0s</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="metric-label">Most Viewed</span>
+                        <span class="metric-value" id="mostViewed">Projects</span>
+                    </div>
+                </div>
+                <p class="analytics-note">📊 Analytics powered by Google Analytics & Local Tracking</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p class="cert-issuer">Coursera / Udemy</p>
+                    <p class="cert-description">Comprehensive Python course covering fundamentals, OOP, and libraries like NumPy and Pandas.</p>
+                    <a href="#" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Machine Learning Basics</h3>
+                    <p class="cert-issuer">Coursera</p>
+                    <p class="cert-description">Introduction to machine learning algorithms, supervised learning, and practical applications with scikit-learn.</p>
+                    <a href="#" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development Bootcamp</h3>
+                    <p class="cert-issuer">Udemy</p>
+                    <p class="cert-description">Full-stack web development including HTML, CSS, JavaScript, Node.js, and MongoDB.</p>
+                    <a href="#" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL & Database Design</h3>
+                    <p class="cert-issuer">DataCamp</p>
+                    <p class="cert-description">Advanced SQL queries, database design principles, and optimization techniques.</p>
+                    <a href="#" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Science Fundamentals</h3>
+                    <p class="cert-issuer">IBM / Coursera</p>
+                    <p class="cert-description">Data analysis, visualization, and insights generation using Python and popular libraries.</p>
+                    <a href="#" class="cert-link">View Certificate →</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Competitive Programming</h3>
+                    <p class="cert-issuer">HackerRank / LeetCode</p>
+                    <p class="cert-description">Problem solver with strong skills in algorithms and data structures across multiple platforms.</p>
+                    <a href="#" class="cert-link">View Profile →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">Have a project in mind? Let's create something amazing together</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Connect With Me</h3>
+                    <p>Reach out through any of these platforms. I'd love to hear from you!</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gowtham-nagaraju" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com/Gowtham17483" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://github.com/gowtham-2006-droid" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:gowthamnagaraju366@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Gowtham Nagaraju. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/gowtham-nagaraju" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/Gowtham17483" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/gowtham-2006-droid" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:gowthamnagaraju366@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
