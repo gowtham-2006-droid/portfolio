@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnalytics();
     initGoogleAnalytics();
     initSkillProgress();
+    initCustomCursor();
+    initPageTransitions();
+    initConfetti();
 });
 
 // ===== MOBILE MENU =====
@@ -780,6 +783,167 @@ function animateSkillProgress(element, target) {
     }
 
     requestAnimationFrame(updateProgress);
+}
+
+// ===== CUSTOM CURSOR EFFECT =====
+function initCustomCursor() {
+    const cursor = document.querySelector('.custom-cursor');
+    const trailCursor = document.querySelector('.cursor-trail');
+    let mouseX = 0;
+    let mouseY = 0;
+    let trailX = 0;
+    let trailY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+        cursor.classList.add('active');
+
+        // Create trail effect
+        if (Math.random() > 0.8) {
+            createTrail(mouseX, mouseY);
+        }
+    });
+
+    document.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active');
+    });
+
+    // Cursor glow on hover
+    document.querySelectorAll('a, button, .project-card, .skill-progress-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.width = '30px';
+            cursor.style.height = '30px';
+            cursor.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--primary')}`;
+            cursor.style.borderWidth = '3px';
+        });
+
+        el.addEventListener('mouseleave', () => {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+            cursor.style.boxShadow = `0 0 15px rgba(0, 217, 255, 0.5)`;
+            cursor.style.borderWidth = '2px';
+        });
+    });
+
+    function createTrail(x, y) {
+        const trail = document.createElement('div');
+        trail.className = 'cursor-trail show';
+        trail.style.left = x + 'px';
+        trail.style.top = y + 'px';
+        document.body.appendChild(trail);
+
+        setTimeout(() => trail.remove(), 800);
+    }
+
+    console.log('✅ Custom cursor effect initialized');
+}
+
+// ===== PAGE TRANSITION ANIMATIONS =====
+function initPageTransitions() {
+    const pageTransition = document.querySelector('.page-transition');
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            
+            if (href !== '#' && href !== '#home' && href.startsWith('#')) {
+                e.preventDefault();
+                
+                // Trigger transition
+                pageTransition.classList.add('active');
+                
+                setTimeout(() => {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    pageTransition.classList.remove('active');
+                }, 300);
+            }
+        });
+    });
+
+    console.log('✅ Page transition animations initialized');
+}
+
+// ===== CONFETTI EFFECT =====
+function initConfetti() {
+    const contactForm = document.getElementById('contactForm');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // Confetti on form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nameInput = contactForm.querySelector('input[type="text"]');
+            const emailInput = contactForm.querySelector('input[type="email"]');
+            const messageInput = contactForm.querySelector('textarea');
+            
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
+            
+            if (!name || !email || !message) {
+                showNotification('Please fill in all fields', 'error');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+            
+            // Trigger confetti
+            triggerConfetti();
+            showNotification('🎉 Message sent successfully! Confetti celebration!', 'success');
+            
+            setTimeout(() => {
+                contactForm.reset();
+            }, 400);
+            
+            console.log('📧 Message:', { name, email, message });
+        });
+    }
+
+    // Confetti on project card click
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.addEventListener('click', triggerConfetti, { once: true });
+        });
+    });
+
+    console.log('✅ Confetti effects initialized');
+}
+
+function triggerConfetti() {
+    const confettiCount = 30;
+    const colors = ['red', 'blue', 'purple', 'green', 'yellow'];
+
+    for (let i = 0; i < confettiCount; i++) {
+        setTimeout(() => {
+            const confetti = document.createElement('div');
+            confetti.className = `confetti ${colors[Math.floor(Math.random() * colors.length)]} falling`;
+            
+            const randomX = Math.random() * window.innerWidth;
+            const randomDelay = Math.random() * 0.2;
+            
+            confetti.style.left = randomX + 'px';
+            confetti.style.top = '0px';
+            confetti.style.animationDelay = randomDelay + 's';
+            
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 3000);
+        }, i * 30);
+    }
+
+    console.log('🎉 Confetti triggered!');
 }
 
 // ===== CONSOLE MESSAGE =====
